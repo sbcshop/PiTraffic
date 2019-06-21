@@ -12,6 +12,9 @@ import time
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
+def closeGPIO():
+    GPIO.cleanup()
+
 class Buzzer:
     def __init__(self):
         self.pin = 12
